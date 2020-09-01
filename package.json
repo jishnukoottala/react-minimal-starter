@@ -1,0 +1,25 @@
+{
+  "name": "react-webpack-setup-starter",
+  "version": "1.0.0",
+  "description": "webpack starter kit for React 2020, latest version",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config=config/webpack.dev.js",
+    "build": "webpack --config=config/webpack.dev.js"
+  },
+  "keywords": [
+    "webpack",
+    "react",
+    "babel",
+    "typescript"
+  ],
+  "author": "Jishnu Koottala",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^4.2.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
