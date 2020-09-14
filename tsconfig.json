@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "outDir": "./build/",
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "target": "esnext",
+    "allowJs": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "types": ["react", "jest"],
+    "paths": {
+      "Src/*": ["src/*"]
+    }
+  },
+  "include": ["./src/**/*", "tsconfig.json", "./typings/**/*.ts"]
+}

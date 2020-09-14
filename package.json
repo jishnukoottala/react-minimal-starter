@@ -4,8 +4,9 @@
   "description": "webpack starter kit for React 2020, latest version",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config=config/webpack.dev.js",
-    "build": "webpack --config=config/webpack.dev.js"
+    "start": "webpack-dev-server --hot --config=config/webpack.dev.js --mode development",
+    "build": "webpack --config=config/webpack.dev.js",
+    "lint": "eslint './src/**/*.{ts,tsx}' --fix"
   },
   "keywords": [
     "webpack",
@@ -15,9 +16,37 @@
   ],
   "author": "Jishnu Koottala",
   "license": "ISC",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
   "devDependencies": {
-    "css-loader": "^4.2.2",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-typescript": "^7.11.0",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.2",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "html-webpack-plugin": "^4.4.1",
+    "prettier": "^2.1.1",
+    "react-refresh": "^0.8.3",
     "style-loader": "^1.2.1",
+    "type-fest": "^0.16.0",
+    "typescript": "^4.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
