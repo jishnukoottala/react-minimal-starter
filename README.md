@@ -134,13 +134,19 @@ npm i  clean-webpack-plugin html-webpack-plugin copy-webpack-plugin -D
 set 2 - babel, loaders
 
 ```sh
-npm i  @babel/cli @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript babel-plugin-transform-class-properties babel-loader source-map-loader url-loader -D
+npm i  @babel/cli @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript babel-plugin-transform-class-properties babel-loader source-map-loader url-loader @types/react @types/react-dom -D
 ```
 
 set 3 - react refresh for hot reloading capabilities [React-Refresh-Webpack-Plugin](https://github.com/pmmmwh/react-refresh-webpack-plugin)
 
 ```sh
 npm install -D @pmmmwh/react-refresh-webpack-plugin react-refresh
+```
+
+set 4 - jest for testing
+
+```sh
+npm i jest @types/jest -D
 ```
 
 Now copy index.html from the dist folder to src folder, we will set this as a template for the final html
