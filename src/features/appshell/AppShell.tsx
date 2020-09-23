@@ -6,7 +6,7 @@ export const AppShell: React.FC = ({ children }) => {
   return (
     <div>
       <Header />
-      <div className="main" style={{ minHeight: "100%" }}>
+      <div className="main" style={{ minHeight: "90vh" }}>
         {children}
       </div>
       <Footer />

@@ -5,7 +5,6 @@ import { App } from "./app/app"
 
 const Application: React.FC = () => (
   <div>
-    Hello world
     <App />
   </div>
 )
