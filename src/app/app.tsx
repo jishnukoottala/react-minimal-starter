@@ -1,5 +1,5 @@
 import React from "react"
-import { AppShell } from "Src/features/appshell/AppShell"
+import { AppShell } from "../features/appshell/AppShell"
 
 export const App: React.FC = () => {
   return (

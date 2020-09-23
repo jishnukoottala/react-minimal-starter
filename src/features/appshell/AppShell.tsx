@@ -1,6 +1,6 @@
 import React from "react"
-import { Header } from "Features/appshell/Header"
-import { Footer } from "Features/appshell/Footer"
+import { Header } from "./Header"
+import { Footer } from "./Footer"
 
 export const AppShell: React.FC = ({ children }) => {
   return (
