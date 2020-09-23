@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "types": ["react", "jest"],
     "paths": {
-      "Src/*": ["src/*"]
+      "Src/*": ["src/*"],
+      "Features/*": ["src/features/*"]
     }
   },
   "include": ["./src/**/*", "tsconfig.json", "./typings/**/*.ts"]

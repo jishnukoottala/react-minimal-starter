@@ -45,6 +45,10 @@ module.exports = (env, { mode }) => {
     ].filter(Boolean),
     resolve: {
       extensions: [".mjs", ".js", ".jsx", ".tsx", ".ts"],
+      alias: {
+        Src: path.resolve(__dirname, "./src/"),
+        Features: path.resolve(__dirname, "./src/features/"),
+      },
     },
   }
 }

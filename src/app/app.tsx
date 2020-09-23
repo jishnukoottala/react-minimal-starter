@@ -1,11 +1,10 @@
 import React from "react"
+import { AppShell } from "Src/features/appshell/AppShell"
 
 export const App: React.FC = () => {
-  const [st, setSt] = React.useState("new")
   return (
-    <div>
-      <h1>Hello World</h1>
-      state is {st}
-    </div>
+    <AppShell>
+      <div>Webpack with React Typescript setup</div>
+    </AppShell>
   )
 }

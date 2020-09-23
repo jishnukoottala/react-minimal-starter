@@ -187,14 +187,6 @@ npm install -D @pmmmwh/react-refresh-webpack-plugin react-refresh
 
 ```
 
-set 4 - jest for testing
-
-```sh
-
-npm i jest @types/jest -D
-
-```
-
 Now copy index.html from the dist folder to src folder, we will set this as a template for the final html
 
 create .babelrc
@@ -291,7 +283,7 @@ ESLint supports both typescript and javascript, therefore for linting, we will u
 
 ```sh
 
-npm i eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
+npm i eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-import-resolver-typescript -D
 
 ```
 
@@ -310,33 +302,41 @@ Create .eslintrc.js file at the root
 ```javascript
 module.exports = {
   parser: "@typescript-eslint/parser",
-
-  plugins: ["prettier", "react", "react-hooks", "jsx-a11y"],
-
+  plugins: ["prettier", "react", "react-hooks", "jsx-a11y", "import"],
   extends: [
     "plugin:react/recommended",
-
     "plugin:@typescript-eslint/recommended",
-
     "prettier/@typescript-eslint",
-
     "plugin:prettier/recommended",
-
     "plugin:import/errors",
-
     "plugin:import/warnings",
-
     "plugin:import/typescript",
-
     "plugin:jsx-a11y/recommended",
-
     "plugin:eslint-comments/recommended",
   ],
-
   parserOptions: {
     ecmaVersion: 6,
-
     sourceType: "module",
+  },
+  settings: {
+    react: {
+      version: "detect",
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"],
+    },
+    polyfills: ["Promise", "navigator.mediaDevices"],
+    "import/resolver": {
+      typescript: {
+        project: "./",
+      },
+    },
+  },
+  rules: {
+    "react/no-children-prop": "off",
+    // turn on errors for missing imports
+    "import/no-unresolved": "error",
+    "react/prop-types": "off",
   },
 }
 ```
@@ -369,7 +369,17 @@ It is good to add a command in the package.json scripts that will run ESLint
 
 [ESLint in Typescript Project](https://www.robertcooper.me/using-eslint-and-prettier-in-a-typescript-project)
 
-### 4. Commit Hooks with lint-staged
+### 4. Test setup with Jest and React Testing Library
+
+set 4 - jest for testing
+
+```sh
+
+npm i @types/jest @testing-library/react @testing-library/jest-dom jest ts-jest  -D
+
+```
+
+### 5. Commit Hooks with lint-staged
 
 Linting makes the codebase less error prone, as it enforces a recommended code style, you may only need to lint files based on which you have performed a commit rather than running it on whole codebase, lint-staged is package that comes in handy for achieving this.
 
@@ -395,6 +405,22 @@ the above command, when run will do the linting and also run the typescript, so 
 
 TODO: Documentation
 
-### 5. Test setup with Jest
+- Image
+- icons
+- fonts
+- extracting template just for basic HTML,CSS and JS
+
+Feature roadmap
+
+- Azure Deployment
+- Azure pipelines scripts for deployment
+- Serve as static through github actions and github pages
+- extend it with popular css framework
+- storybook integration
+- sass integration
+- i18n integration
+- popular state management integration
+- graphql with apollo
+- Azure AD Login implementation
 
 > Written with [StackEdit](https://stackedit.io/).

@@ -1,6 +1,6 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
-  plugins: ["prettier", "react", "react-hooks", "jsx-a11y"],
+  plugins: ["prettier", "react", "react-hooks", "jsx-a11y", "import"],
   extends: [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
@@ -15,5 +15,25 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 6,
     sourceType: "module",
+  },
+  settings: {
+    react: {
+      version: "detect",
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"],
+    },
+    polyfills: ["Promise", "navigator.mediaDevices"],
+    "import/resolver": {
+      typescript: {
+        project: "./",
+      },
+    },
+  },
+  rules: {
+    "react/no-children-prop": "off",
+    // turn on errors for missing imports
+    "import/no-unresolved": "error",
+    "react/prop-types": "off",
   },
 }
